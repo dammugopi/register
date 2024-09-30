@@ -1,0 +1,154 @@
+
+
+
+<section class="vh-100 gradient-custom">
+    <div class="container    ">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-5"></div>
+        <div class="col-7">
+          <div class="" style="border-radius: 15px; height: 90vh; background-color: #FFFFFF;
+          background-image: linear-gradient(45deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+          ">
+            <div class="h-100 p-4">
+              <h3 class="mb-3">Registration Form</h3>
+              <form  #f [formGroup]="registerForm" (ngSubmit)="onsubmit(f)" >
+  
+                <div class="row">
+                  <div class="col-md-6">
+                    <div   class="form-outline">
+                    <label class="form-label" for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-control  " formControlName="firstname"  [ngClass]="{
+                        'is-invalid':
+                        fc['firstname'].touched &&
+                        fc['firstname'].invalid
+                      }"/>
+                    </div>
+                    <div *ngIf=" fc['firstname'].invalid">
+                        <div *ngIf="fc['firstname'].errors?.['required'] && fc['firstname'].touched" class="alert alert-danger p-1" role="alert">firstname is required.</div>
+                        <div *ngIf="fc['firstname'].errors?.['pattern']" class="alert alert-danger p-1" role="alert">  only characters format.</div>
+                      </div>
+  
+                  </div>
+                  <div class="col-md-6">
+                    <div data-mdb-input-init class="form-outline">
+                      <label class="form-label" for="lastName">Last Name</label>
+                      <input type="text" id="lastName" class="form-control " formControlName="lastname"   [ngClass]="{
+                        'is-invalid':
+                        fc['lastname'].touched &&
+                        fc['lastname'].invalid
+                      }"/>
+                    </div>
+                    <div *ngIf=" fc['lastname'].invalid">
+                        <div *ngIf="fc['lastname'].errors?.['required'] && fc['lastname'].touched" class="alert alert-danger p-1" role="alert">lastname is required.</div>
+                        <div *ngIf="fc['lastname'].errors?.['pattern']" class="alert alert-danger p-1" role="alert"> only characters format.</div>
+                      </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-6 mt-2">
+                    <div  class="form-outline">
+                        <label class="form-label" for="emailAddress">Email</label>
+                        <input type="email" id="emailAddress" class="form-control  " formControlName="email"   [ngClass]="{
+                            'is-invalid':
+                            fc['email'].touched &&
+                            fc['email'].invalid
+                          }"/>
+                    </div>
+                    <div *ngIf=" fc['email'].invalid">
+                        <div *ngIf="fc['email'].errors?.['required'] && fc['email'].touched" class="alert alert-danger p-1" role="alert">email is required.</div>
+                        <div *ngIf="fc['email'].errors?.['pattern']" class="alert alert-danger p-1" role="alert">enter correct email format.</div>
+                      </div>
+                  </div>
+
+                   
+                  <div class="col-6 mt-3">
+  
+                    <h6 class="pt-3">Gender: </h6>
+  
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="femaleGender">Female</label>
+                        <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                      value="Female" formControlName="gender"/>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="maleGender">Male</label>
+                        <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                      value="Male" formControlName="gender"/>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="otherGender">Other</label>
+                        <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                      value="other"  formControlName="gender"/>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mt-2 ">
+                     <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" class="form-control  " formControlName="phoneno"  [ngClass]="{
+                            'is-invalid':
+                            fc['phoneno'].touched &&
+                            fc['phoneno'].invalid
+                          }" />
+                    </div>
+                    <div *ngIf=" fc['phoneno'].invalid">
+                        <div *ngIf="fc['phoneno'].errors?.['required'] && fc['phoneno'].touched" class="alert alert-danger p-1" role="alert">phoneno is required.</div>
+                        <div *ngIf="fc['phoneno'].errors?.['pattern']" class="alert alert-danger p-1" role="alert">enter correct phone no format.</div>
+                      </div>
+  
+                      
+                  </div>
+
+                </div>
+  
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                      <div   class="form-outline">
+                      <label class="form-label" for="firstName">password</label>
+                      <input type="password" id="password" class="form-control "  formControlName="password"  [ngClass]="{
+                        'is-invalid':
+                        fc['password'].touched &&
+                        fc['password'].invalid
+                      }"/>
+                      </div>
+                      <div *ngIf=" fc['password'].invalid">
+                        <div *ngIf="fc['password'].errors?.['required'] && fc['password'].touched" class="alert alert-danger p-1" role="alert">password is required.</div>
+                        <div *ngIf="fc['password'].errors?.['pattern']" class="alert alert-danger p-1" role="alert">enter correct password format.</div>
+                      </div>
+    
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-outline">
+                        <label class="form-label" for="lastName">confirm password</label>
+                        <input type="password" id="confirmpassword" class="form-control" formControlName="confirmpassword"   [ngClass]="{
+                            'is-invalid':
+                            fc['confirmpassword'].touched &&
+                            fc['confirmpassword'].invalid
+                          }"/>
+                      </div>
+                      <div *ngIf=" fc['confirmpassword'].invalid">
+                        <div *ngIf="fc['confirmpassword'].errors?.['required'] && fc['confirmpassword'].touched" class="alert alert-danger p-1" role="alert">password is required.</div>
+                        <div *ngIf="fc['confirmpassword'].errors?.['pattern']" class="alert alert-danger p-1" role="alert">enter correct password format.</div>
+                      </div>
+    
+                    </div>
+                  </div>
+  
+                <div class="mt-4 pt-2  ">
+                  <input   class="btn btn-primary btn-lg mb-2" type="submit" value="Register" />
+                </div>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

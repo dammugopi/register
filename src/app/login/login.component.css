@@ -1,0 +1,89 @@
+.row1{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-4{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.imgdiv{
+    border-radius: 30px;
+    height: 80%;
+    width:80%;
+}
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+h1{
+    color:rgb(22, 169, 22); 
+}
+h5{
+    color:rgb(22, 169, 22); 
+
+}
+
+.logindiv{
+    background-color: rgb(128, 131, 131);
+    border: 2px solid black;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+.col-5{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.inputdiv{
+    background-color: rgb(68, 65, 65);
+    height: 80%;
+    width: 110%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+    margin: 0 30px;
+     
+
+}
+a{
+    font-size: 18px;
+    color: rgb(22, 169, 22);
+}
+label{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(22, 169, 22);
+}
+
+.btnlogin{
+    
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(22, 169, 22);
+    background-color: black;
+
+}
+input{
+    background-color:rgb(18, 17, 17) ;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgb(28, 182, 28);
+    color:rgb(28, 182, 28); 
+}
+
+::placeholder{
+    color: rgb(22, 169, 22);
+    font-size: 16px;
+}
+  
+
+ 

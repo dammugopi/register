@@ -1,0 +1,16 @@
+ label{
+    font-size: 18px;
+ }
+ .container{
+    
+    height: 100vh;
+    
+ }
+ section{
+   height: 120vh;
+   background-image: url(https://i.pinimg.com/736x/6b/e1/35/6be13526cd3189dc14f5aa8a0984647a.jpg);
+    background-position: center;
+    background-size:cover;
+     
+
+ }
